@@ -1,0 +1,30 @@
+<div class="offer-creation">
+  <h3>Post new Offer</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="offer.title" name="title" required placeholder="Title">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="offer.description" name="description" required placeholder="Description" rows="5"></textarea>
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" [(ngModel)]="offer.location" name="location" required placeholder="Country, city, neighborhood, the office, my desk, etc..."/>
+    </div>
+    <div>
+      <label for="categoryId">Category:</label>
+      <select id="categoryId" [(ngModel)]="offer.categoryId" name="categoryId" required>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="pictureUrl">Picture URL:</label>
+      <input type="text" id="pictureUrl" [(ngModel)]="offer.pictureUrl" name="pictureUrl" required placeholder="offers/iphone.jpg" value="offers/iphone.jpg"/>
+    </div>
+    <div>
+      <button type="submit" class="offer-submit-button">Create</button>
+    </div>
+  </form>
+</div>

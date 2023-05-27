@@ -1,0 +1,44 @@
+<div>
+  <mat-toolbar>
+    <a mat-button class="companyName" routerLink="/">
+      <span>ROSEN Marketplace</span>
+    </a>
+    <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/Offer/ListItems" >List</a>
+      <a mat-button routerLink="/Offer/PostNew" *ngIf="isUserLogged()">Post new</a>
+      <ng-container *ngIf="isUserLogged(); else loggedOut">
+        <a mat-button routerLink="/Login">Hello, {{ getUsernameFromLocalStorage() }} <sub
+            class="logout-text">LOGOUT</sub></a>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a mat-button routerLink="/Login">Login</a>
+      </ng-template>
+    </div>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true"
+      position="end">
+      <div fxLayout="column" class="sideCol">
+        <ng-container *ngIf="isUserLogged(); else loggedOut">
+          <a mat-button routerLink="/Login">{{ getUsernameFromLocalStorage() }} <sub
+              class="logout-text">LOGOUT</sub></a>
+        </ng-container>
+        <ng-template #loggedOut>
+          <a mat-button routerLink="/Login">Login</a>
+        </ng-template>
+        <a mat-button routerLink="/Offer/ListItems">List</a>
+        <a *ngIf="isUserLogged()" mat-button routerLink="/Offer/PostNew">Post new</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

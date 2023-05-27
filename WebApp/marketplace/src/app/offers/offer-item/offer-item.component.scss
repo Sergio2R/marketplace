@@ -1,0 +1,60 @@
+.my-card {
+    width: 16rem;
+    border-radius: 0.5rem;
+}
+
+.my-card mat-card-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: grey;
+}
+
+.my-card mat-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.my-card mat-card-subtitle {
+    font-size: 1rem;
+    color: #cbcbcb;
+}
+
+.my-card mat-card-image {
+    height: 1rem;
+    object-fit: cover;
+}
+
+.my-card mat-card-content {
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+}
+
+.my-card mat-card-content i {
+    color: grey;
+}
+
+.my-card mat-card-content i{
+    margin: 0.5rem;
+}
+
+.my-card mat-card-content p{
+    margin: 0.5rem;
+}
+
+.my-card mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    background-color: white;
+}
+
+.my-card mat-card-actions div {
+    color: white;
+    padding: 0.5rem;
+    background-color: #136b6a;
+    border-radius: 0 0 0.5rem 0;
+}

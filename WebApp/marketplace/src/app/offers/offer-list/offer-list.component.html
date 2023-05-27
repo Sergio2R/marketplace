@@ -1,0 +1,15 @@
+<div class="offer-container">
+  <ng-container *ngIf="offersPage">
+    <ng-container *ngFor="let offerItem of offersPage.items; let i = index">
+      <app-offer-item [offer]="offerItem"></app-offer-item>
+    </ng-container>
+  </ng-container>
+  <div class="page-buttons">
+    <button *ngFor="let button of buttons" (click)="loadOffersPage(button.pageIndex)">
+      {{ button.label }}
+    </button>
+  </div>
+  <div class="page-info">
+    Page {{ actualPage + 1 }} of {{ totalPages }}
+  </div>
+</div>

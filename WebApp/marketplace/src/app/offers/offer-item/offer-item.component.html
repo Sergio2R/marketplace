@@ -1,0 +1,19 @@
+<mat-card class="my-card">
+  <mat-card-header>
+    <mat-card-title>{{offer.title}}</mat-card-title>
+    <mat-card-subtitle>{{offer.location}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="generateImageUrl()" alt="{{ offer.description }}">
+
+  <mat-card-content>
+    <i>
+      {{offer.userName}} {{offer.publishedOn | date:'medium'}} 
+    </i>
+    <p>
+      {{offer.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div>{{offer.categoryName}} </div>  
+  </mat-card-actions>
+</mat-card> 

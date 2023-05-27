@@ -1,0 +1,53 @@
+.offer-creation {
+  max-width: 20rem;
+  margin: 5rem auto auto auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 0.5rem;
+
+}
+
+.offer-creation h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+
+}
+
+.offer-creation form {
+  display: grid;
+  gap: 10px;
+}
+
+.offer-creation label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.offer-creation select {
+  display: block;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.offer-creation input,
+.offer-creation textarea {
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.offer-creation button {
+  color: white;
+  padding: 0.5rem;
+  background-color: #136b6a;
+  border-radius: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.offer-creation button:hover {
+  background-color: #00b336;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
